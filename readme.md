@@ -36,3 +36,8 @@ Al tener ese `Enum` puedo parsear el fichero usando `Enum.parse` y a otra cosa m
 
 En la segunda parte del reto nos añaden una nueva variable (`aim`) y la profundidad depende del valor de dicha variable. Se trata de una modificación relativamente sencilla y que podéis ver en la clase `Quiz2b.AimedSubmarine`: ahora `Up` y `Down` modifican el valor de `Aim` y el valor de `Depth` se modifica al llamar a `Forward`.
 
+## Reto 3 - Binary Diagnostic
+
+Esa ha sido divertida, y es que todo lo que tiene que ver con manejo de bits, lo es xD
+
+A grandes rasgos en la primera parte nos contar qué digito binario se repite en cada posición de todos los elementos de un array y construir dos valores (uno llamado gamma y su complemento a uno, llamado epsilon). Lo único a tener presente es que no todos los bits importan (p. ej. en la web los valores son todos de 5 bits, pero en los datos de ejemplo son de 12). He perdido un poco de tiempo porque tenía un error, pero el único test unitario que tenía (basado en los datos de ejemplo de la web), no lo pillaba: un recordatorio de que es necesario que los tests cubran cuantos más casos mejor :) He añadido un test específico para el error (`Given_All_Ones_Gamma_Should_Be_All_Ones_And_Epsilon_Should_Be_Zero`).

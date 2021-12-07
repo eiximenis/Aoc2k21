@@ -29,9 +29,14 @@ public static class Quiz1
         return depths.Zip(depths.Skip(1)).Count(p => p.Item2 > p.Item1);
     }
 
-    public static IEnumerable<(T, T)> ToPairs<T>(this IEnumerable<T> input)
+}
+
+public static class Quiz1b
+{
+    public static int GetDepthIncreasesByTriples(IEnumerable<int> depths)
     {
-        if (input.Count() <= 1) { return Enumerable.Empty<(T, T)>(); }
-        return input.Zip(input.Skip(1));
+        var sums = depths.Zip(depths.Skip(1), depths.Skip(2)).Select(i => i.First + i.Second + i.Third);
+        return Quiz1.GetDepthIncreases_V2(sums);
+
     }
 }

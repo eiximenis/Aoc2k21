@@ -76,6 +76,25 @@ public class QuizTests
             result.Should().Be(0);
         }
     }
+}
 
+public class Quiz1bTests
+{
+
+    [Fact]
+    public void Given_No_Increases_Zero_Should_Be_Returned()
+    {
+        var inputs = new[] { 100, 90, 80, 70, 60, 50, 40, 30, 20, 10 };
+        var result = Quiz1b.GetDepthIncreasesByTriples(inputs);
+        result.Should().Be(0);
+    }
+
+    [Fact]
+    public void Given_Example_Inputs_Example_Answer_Should_Be_Returned()
+    {
+        var inputs = new[] { 199, 200, 208, 210, 200, 207, 240, 269, 260, 263 };
+        var result = Quiz1b.GetDepthIncreasesByTriples(inputs);
+        result.Should().Be(5);
+    }
 
 }

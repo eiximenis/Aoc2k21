@@ -7,7 +7,7 @@ using Xunit;
 
 namespace Aoc2k21.Tests;
 
-public class QuizTests
+public class Quiz1Tests
 {
 
 

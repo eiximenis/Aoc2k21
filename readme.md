@@ -1,13 +1,15 @@
-1# Advent of code 2021
+# Advent of code 2021
 
-Este repo contiene mis soluciones al "Advent of Code 2021". Está desarrollado con C# y compilado bajo NET6.
+Este repo contiene mis soluciones al ["Advent of Code 2021"](https://adventofcode.com/2021). Está desarrollado con C# y compilado bajo NET6.
 
 El repo contiene dos proyectos:
 
 - `Aoc2k21`: Implementación de las soluciones de cada uno de los ejercicios. Es una librería de clases, con una clase por cada reto.
 - `Aoc2k21.Tests`: Tests unitarios (xUnit) para cada implementación
 
-## Reto 1
+## Reto 1 - Sonar Sweep
+
+Puedes [ver el reto aquí](https://adventofcode.com/2021/day/1).
 
 Hay dos implementaciones del reto: la primera (`Quiz1.GetDepthIncreases`) es una solución iterativa clásica, mientras que la segunda (`Quiz2.GetDepthIncreases_V2`) es más funcional y se basa en recorrer la colección de entrada en parejas de elementos (i, i+1) (siendo i el índice) y contar en cuantas de esas parejas se cumple que el segundo elemento sea mayor al primero.
 
@@ -16,7 +18,9 @@ En la segunda parte del reto nos piden que ahora hagamos ventanas de tres valore
 La solución es relativamente sencilla (`Quiz1b.GetDepthIncreasesByTriples`) y se trata de proyectar todas las tuplas ternarias en una colección con sus sumas y luego usar esa colección como entrada a la función que nos resolvía la primera parte del reto :)
 
 
-## Reto 2
+## Reto 2 - Dive!
+
+Puedes [ver el reto aquí](https://adventofcode.com/2021/day/2).
 
 La primera parte del reto es sencillita: tenemos un submarino que tiene una posición inicial (horizontal=0, profunidad=0) y tres comandos (forward, up, down) que desplazan la posición horizontal y la profundidad. Nos preguntan a que profundidad y posición horizontal estará el submarino al cabo de N movimientos.
 
@@ -30,5 +34,5 @@ up 20
 
 Al tener ese `Enum` puedo parsear el fichero usando `Enum.parse` y a otra cosa mariposa...
 
-
+En la segunda parte del reto nos añaden una nueva variable (`aim`) y la profundidad depende del valor de dicha variable. Se trata de una modificación relativamente sencilla y que podéis ver en la clase `Quiz2b.AimedSubmarine`: ahora `Up` y `Down` modifican el valor de `Aim` y el valor de `Depth` se modifica al llamar a `Forward`.
 

@@ -19,7 +19,7 @@ namespace Aoc2k21.Tests
             var fname = Path.GetTempFileName();
             await File.WriteAllLinesAsync(fname, data);
 
-            var read = await Quiz3.Common.GetInputData(fname);
+            var read = await Common.GetInputData(fname);
             var expected = data.Select(i => Convert.ToInt16(i, 2));
             read.Should().BeEquivalentTo(expected);
         }
